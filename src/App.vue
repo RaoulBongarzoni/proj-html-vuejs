@@ -1,12 +1,19 @@
 <script>
-import AppComponent from "./components/AppComponent.vue"
+
+import PageHeader from "./components/PageHeader.vue"
+import PageMain from "./components/PageMain.vue"
+import PageFooter from "./components/Pagefooter.vue"
+
 /* 
 import axios from 'axios'; //importo Axios */
 import { store } from "./store.js" //state management
 
 export default {
 	components: {
-		AppComponent
+		PageHeader,
+		PageFooter,
+		PageMain
+
 	},
 	data() {
 		return {
@@ -32,9 +39,9 @@ export default {
 
 <template>
 	<main>
-		<AppComponent />
-
-		<button class="btn btn-primary">Primary button</button>
+		<PageHeader />
+		<PageMain />
+		<PageFooter />
 	</main>
 </template>
 
