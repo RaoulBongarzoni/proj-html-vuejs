@@ -1,3 +1,8 @@
 $themeColorDark: #222;
 $themeColorLight: white;
 $themeColorAccent: crimson;
+
+
+
+$list-group-bg: var(--#{transparent}body-bg);
+$list-group-border-color: var(--#{transparent}border-color);

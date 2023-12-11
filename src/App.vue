@@ -3,6 +3,7 @@
 import PageHeader from "./components/PageHeader.vue"
 import PageMain from "./components/PageMain.vue"
 import PageFooter from "./components/Pagefooter.vue"
+import PageJumbo from "./components/PageJumbo.vue"
 
 /* 
 import axios from 'axios'; //importo Axios */
@@ -12,7 +13,8 @@ export default {
 	components: {
 		PageHeader,
 		PageFooter,
-		PageMain
+		PageMain,
+		PageJumbo
 
 	},
 	data() {
@@ -38,11 +40,12 @@ export default {
 </script>
 
 <template>
-	<main>
-		<PageHeader />
-		<PageMain />
-		<PageFooter />
-	</main>
+	<div class="d-flex justify-content-center" style="position: relative;">
+		<PageHeader style="position: absolute; width: 100%; margin: 0 auto" />
+		<PageJumbo /><!-- sezione con carosello da completare -->
+	</div>
+	<PageMain />
+	<PageFooter />
 </template>
 
 <style lang="scss">
