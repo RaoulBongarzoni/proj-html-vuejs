@@ -1,5 +1,5 @@
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 
 export default {
 
@@ -50,7 +50,6 @@ export default {
 
     .colorYellow {
         color: $themeColorYellow;
-
     }
 }
 </style>
