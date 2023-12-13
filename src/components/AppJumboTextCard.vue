@@ -1,9 +1,17 @@
 <script>
+import { store } from "../store"
+
 
 
 
 export default {
-
+    data() {
+        return {
+            store
+        }
+    }, props: {
+        img: "string"
+    }
 
 }
 </script>
@@ -27,7 +35,7 @@ export default {
                 </div>
             </div>
             <div class="col-6 d-flex justify-content-center">
-                <img src="../assets/images/images/best-sem-seo-services-slide-2.png" alt="" class="w-100">
+                <img :src="img" alt="imgJumbo" class="w-100">
             </div>
         </div>
 

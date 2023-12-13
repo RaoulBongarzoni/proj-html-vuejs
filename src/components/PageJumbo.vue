@@ -1,6 +1,6 @@
 <script>
 import { store } from "../store.js" //state management
-import register from "../debug" //per debuggare il componente da console
+
 import Card from "./AppJumboTextCard.vue"
 export default {
     name: "AppComponent",
@@ -18,8 +18,7 @@ export default {
         }
     },
     mounted() {
-        register(this); //per debuggare il componente da console
-        this.doThings();
+
     }
 }
 </script>
@@ -30,7 +29,7 @@ export default {
         <div class="container nav-space">
             <div class="row">
                 <div class="col-12">
-                    <Card />
+                    <Card :img="store.jumboImages[0]" />
                 </div>
             </div>
         </div>

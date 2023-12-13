@@ -45,16 +45,9 @@ export default {
             </div>
             <!-- 3 cards -->
             <div class="row text-black text-center">
-                <div class="col-4">
-                    <AgencyCard :title="'establish goals'" :iconName="'road'" />
+                <div v-for="element in store.firstSectionCards" class="col-4">
+                    <AgencyCard :title="element.title" :iconName="element.iconName" :subtitle="element.subtitle" />
                 </div>
-                <div class="col-4">
-                    <AgencyCard :title="'establish goals'" :iconName="'video'" />
-                </div>
-                <div class="col-4">
-                    <AgencyCard :title="'establish goals'" :iconName="'droplet'" />
-                </div>
-
             </div>
             <!-- immagine -->
             <div class="row">
@@ -83,18 +76,10 @@ export default {
                         eveniet. Deserunt!</p>
                 </div>
             </div>
-            <div class="row text-black text-center pb-5">
-                <div class="col-3">
-                    <AgencyCard :title="'establish goals'" :iconName="'road'" />
-                </div>
-                <div class="col-3 dark-column">
-                    <AgencyCard :title="'establish goals'" :iconName="'video'" />
-                </div>
-                <div class="col-3">
-                    <AgencyCard :title="'establish goals'" :iconName="'droplet'" />
-                </div>
-                <div class="col-3">
-                    <AgencyCard :title="'establish goals'" :iconName="'droplet'" class="background-dark" />
+            <div class="row text-center pb-5">
+                <div v-for="element in store.SecondSectionCards" class="col-3">
+                    <AgencyCard :title="element.title" :iconName="element.iconName" :subtitle="element.subtitle"
+                        :link="element.link" class="background-dark text-white" />
                 </div>
 
             </div>
@@ -297,15 +282,16 @@ export default {
 
 .bg-darkBlue {
 
-    background-image: url(../assets/images/images/transparent.png);
-    background-image: url(../assets/images/images/pattern_background.png);
-    background-color: $themeColorDarkBlue;
+
+    background-image: url(../assets/images/images/pattern_background.png), url(../assets/images/images/transparent.png);
+    background-color: #051642;
     background-size: cover;
 
     color: white;
 
     .background-dark {
-        background-color: $themeColorBlue;
+        background-color: #071b50;
+
     }
 }
 

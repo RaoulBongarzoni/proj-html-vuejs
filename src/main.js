@@ -15,10 +15,14 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { faRoad } from '@fortawesome/free-solid-svg-icons'
 import { faVideo } from '@fortawesome/free-solid-svg-icons'
 import { faDroplet } from '@fortawesome/free-solid-svg-icons'
+/* import { faGoogle } from '@fortawesome/free-solid-svg-icons' */
+import { faGear } from '@fortawesome/free-solid-svg-icons'
+import { faBuilding } from '@fortawesome/free-solid-svg-icons'
+import { faChartColumn } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
 library.add(faHome);
-library.add(faRoad, faVideo, faDroplet);
+library.add(faRoad, faVideo, faDroplet, faGear, faBuilding, faChartColumn);
 
 window.vue = {};
 window.vue.App = createApp(App)

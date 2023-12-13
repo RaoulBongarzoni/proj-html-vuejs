@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container my-3">
         <!-- container flex -->
 
 
@@ -36,7 +36,7 @@ export default {
             </div>
             <!-- ul con link varie pagine -->
             <div class="col-auto">
-                <ul class="list-group list-group-horizontal ">
+                <ul class="list-group list-group-horizontal align-items-baseline">
                     <li class="list-group-item"><a href="">Home</a></li>
                     <li class="list-group-item"><a href="">asdas</a></li>
                     <li class="list-group-item"><a href="">asdas</a></li>
@@ -47,18 +47,18 @@ export default {
                             <span>
 
                                 asdasd
-                                <span class="btn btn-sm btn-outline-warning">apply</span>
 
                             </span>
 
                         </a>
+                        <span class="btn btn-sm btn-outline-warning">apply</span>
                     </li>
                     <li class="list-group-item"><a href="">asd</a></li>
                 </ul>
             </div>
             <!-- bottone con contatti -->
             <div class="col text-center">
-                <button class="btn btn-warning text-white">GET IN TOUCH NOW</button>
+                <button class="btn btn-warning text-white rounded-pill py-2 px-4">GET IN TOUCH NOW</button>
             </div>
         </div>
 
@@ -73,12 +73,7 @@ export default {
 // importo variabili
 @use '../styles/partials/variables' as *;
 
-.btn {
-    border-radius: 20px;
-    padding-left: 1rem;
-    padding-right: 1rem;
 
-}
 
 a {
     text-decoration: none;

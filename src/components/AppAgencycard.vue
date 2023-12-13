@@ -12,7 +12,8 @@ export default {
     props: {
         iconName: "String",
         title: "String",
-        subtite: "String"
+        subtitle: "String",
+        link: "string"
 
 
     }
@@ -33,8 +34,10 @@ export default {
                 {{ title }}
             </h4>
             <p>
-                {{ string }}
+                {{ subtitle }}
             </p>
+            <a v-if="link" :href="link">read more..</a>
+
 
 
 
@@ -47,6 +50,12 @@ export default {
 
 .card {
     border: none;
+    border-radius: 0;
+
+    a {
+        text-decoration: none;
+        color: $themeColorYellow;
+    }
 
     .colorYellow {
         color: $themeColorYellow;
