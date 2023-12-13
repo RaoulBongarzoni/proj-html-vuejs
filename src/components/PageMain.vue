@@ -2,11 +2,13 @@
 import { store } from "../store.js" //state management
 import register from "../debug" //per debuggare il componente da console
 import AgencyCard from "./AppAgencycard.vue"
+import OurWorkCard from "./CaseStudyCard.vue"
 
 export default {
     name: "AppComponent",
     components: {
-        AgencyCard
+        AgencyCard,
+        OurWorkCard
     },
     data() {
         return {
@@ -109,46 +111,26 @@ export default {
 
                     <div class="row">
 
-                        <div class="col-4">
-                            <img src="../assets/images/images/case-study-gallery-1-1-400x300.jpg" alt="">
+                        <div v-for="element in store.OurWorkElements " class="col-4">
+                            <OurWorkCard :obj="element" />
 
                         </div>
-                        <div class="col-4">
-                            <img src="../assets/images/images/case-study-gallery-1-1-400x300.jpg" alt="">
-
-                        </div>
-                        <div class="col-4">
-                            <img src="../assets/images/images/case-study-gallery-1-1-400x300.jpg" alt="">
-
-                        </div>
-
-
-                    </div>
-                    <div class="row">
-
-                        <div class="col-4">
-                            <img src="../assets/images/images/case-study-gallery-1-1-400x300.jpg" alt="">
-
-                        </div>
-                        <div class="col-4">
-                            <img src="../assets/images/images/case-study-gallery-1-1-400x300.jpg" alt="">
-
-                        </div>
-                        <div class="col-4">
-                            <img src="../assets/images/images/case-study-gallery-1-1-400x300.jpg" alt="">
-
-                        </div>
-
-
                     </div>
 
                 </div>
+                <div class="col-12 d-flex justify-content-center">
+
+                    <button class="btn rounded-pill text-white btn-warning my-5">adadasd</button>
+                </div>
             </div>
-            <button class="btn">adadasd</button>
         </div>
 
     </div>
 
+
+
+
+    <!-- LA PARTE RESTANTE VERRà CURATA NELLA MATTINATA DI DOMANI SCUSATE IL DISAGIO -->
     <!-- ******************************************************************* -->
     <!-- sezione piani-->
     <div class="bg-blue-img">

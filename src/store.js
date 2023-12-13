@@ -75,8 +75,45 @@ export const store = reactive({
         subtitle: "lorem",
         link: "#"
 
-    }]
+    }],
 
+
+
+    OurWorkElements: [
+        {
+            src: "public/img/case-study-gallery-3-1-400x300.jpg",
+            link: "",
+            alt: ""
+        },
+        {
+            src: "public/img/case-study-gallery-2-400x300.jpg",
+            link: "",
+            alt: ""
+        },
+        {
+            src: "public/img/case-study-gallery-1-1-400x300.jpg",
+            link: "",
+            alt: ""
+        },
+        {
+            src: "public/img/case-study-gallery-4-1-400x300.jpg",
+            link: "",
+            alt: ""
+        },
+        {
+            src: "public/img/case-study-gallery-5-1-400x300.jpg",
+            link: "",
+            alt: ""
+        },
+        {
+            src: "public/img/case-study-gallery-6-1-400x300.jpg",
+            link: "",
+            alt: ""
+        },
+
+
+
+    ]
     /* link e immagine sezione 3 */
     /* immagine */
     /* link */
