@@ -166,6 +166,28 @@ export default {
 
     <!-- ******************************************************************* -->
     <!-- sezione piani-->
+    <div class="bg-blue-img">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 text-black d-flex flex-wrap justify-content-center">
+                    <h2 class="fw-bold my-3">lorenasdasdasdasdazsdas asdasd asdasdad
+                    </h2>
+                    <p class="w-50 text-center pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae itaque
+                        dolorum veniam
+                        eum illo
+                        quam
+                        libero sequi, fuga maxime necessitatibus ea, veritatis omnis et, quos officia explicabo velit
+                        eveniet. Deserunt!</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <!-- v-for per creare le carte <div class="col-3"></div>-->
+
+
+            </div>
+        </div>
+    </div>
     <!-- CREO COMPONENTE DESCRIZIONE SEZIONI GENERICO -->
     <!-- MI CREO UN COMPONENTE CARTA -->
     <!-- PASSO PIANI TARIFFARI TRAMITE PROPS E LO STORE -->
@@ -175,13 +197,87 @@ export default {
     <!-- sezione con news -->
     <!-- 3 immagini con descrizione -->
     <!-- bottone centrale -->
+    <div class="bg-white-wash">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 text-black d-flex flex-wrap justify-content-center">
+                    <h2 class="fw-bold my-3">lorenasdasdasdasdazsdas asdasd asdasdad
+                    </h2>
+                    <p class="w-50 text-center pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae itaque
+                        dolorum veniam
+                        eum illo
+                        quam
+                        libero sequi, fuga maxime necessitatibus ea, veritatis omnis et, quos officia explicabo velit
+                        eveniet. Deserunt!</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <!-- v-for per creare le carte <div class="col-4"></div>-->
+
+
+            </div>
+        </div>
+    </div>
 
 
     <!-- feedback dei clienti -->
     <!-- foto cliente -->
     <!-- recensione -->
+    <div class="bg-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 text-black d-flex flex-wrap justify-content-center">
+                    <h2 class="fw-bold my-3">lorenasdasdasdasdazsdas asdasd asdasdad
+                    </h2>
 
-    <!-- carosello automatico partners-->
+
+                </div>
+                <div class="col-12 text-black d-flex flex-wrap flex-column align-items-center">
+                    <img src="../assets/images/images/testimonials-2.jpg" alt="" class="border rounded-circle">
+                    <span>asjdflsakjdflaskjdhflakjsdhflasjhdflaksjdfhlaskjdfhlsdkfjh</span>
+                    <span>
+                        <span class="fw-bold">nome cognome</span>, creo tech
+                    </span>
+
+                </div>
+            </div>
+            <hr class="w-75 text-black m-auto">
+            <div class="row">
+
+                <!-- CAROSELLO AUTOMATICO -->
+
+                <!-- v-for per creare le carte <div class="col-4"></div>-->
+
+
+            </div>
+        </div>
+    </div>
+    <div class="bg-img-filtered">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 text-black d-flex flex-wrap justify-content-center">
+                    <h2 class="fw-bold my-3">lorenasdasdasdasdazsdas asdasd asdasdad
+                    </h2>
+                    <p class="w-50 text-center pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae itaque
+                        dolorum veniam
+                        eum illo
+                        quam
+                        libero sequi, fuga maxime necessitatibus ea, veritatis omnis et, quos officia explicabo velit
+                        eveniet. Deserunt!</p>
+                </div>
+
+            </div>
+            <div class="row">
+                <!-- v-for per creare le carte <div class="col-4"></div>-->
+
+
+            </div>
+        </div>
+    </div>
+
+
+
 
     <!-- footer jumbo -->
 </template>
@@ -195,16 +291,33 @@ export default {
     background-color: $themeColorLight;
 }
 
+.bg-blue-img {
+    background-image: url(../assets/images/images/background1.jpg);
+}
+
 .bg-darkBlue {
 
+    background-image: url(../assets/images/images/transparent.png);
     background-image: url(../assets/images/images/pattern_background.png);
-    background-size: cover;
     background-color: $themeColorDarkBlue;
+    background-size: cover;
+
     color: white;
 
     .background-dark {
         background-color: $themeColorBlue;
     }
+}
+
+
+.bg-img-filtered {
+
+
+    background-image: url(../assets/images/images/case-study-gallery-3-1.jpg);
+
+
+
+
 }
 
 // ...qui eventuale SCSS di AppComponent
