@@ -1,15 +1,23 @@
 <script>
-import { store } from "../store.js" //state management
-
+import { store } from "../store.js"; //state management
 import Card from "./AppJumboTextCard.vue"
+import carousel from "./jumboCarousel.vue"
+
+// Import Swiper Vue.js components
+
+//import 'swiper/css/effect-cube';
+
+
+
 export default {
     name: "AppComponent",
     components: {
-        Card
+        Card,
+        carousel
     },
     data() {
         return {
-            store
+            store,
         }
     },
     methods: {
@@ -17,9 +25,8 @@ export default {
             console.log("AppComponent does things");
         }
     },
-    mounted() {
 
-    }
+
 }
 </script>
 
@@ -28,9 +35,7 @@ export default {
         <!-- padding dall header -->
         <div class="container nav-space">
             <div class="row">
-                <div class="col-12">
-                    <Card :img="store.jumboImages[0]" />
-                </div>
+                <carousel />
             </div>
         </div>
 
@@ -42,12 +47,14 @@ export default {
     width: 100%;
     background-image: url(../assets/images/images/lines-1.png);
     background-image: url(../assets/images/images/pattern_background.png);
-    background-size: contain;
+    background-size: cover;
 }
 
 .nav-space {
     padding-top: 5rem;
+
 }
+
 
 // importo variabili
 

@@ -1,14 +1,35 @@
 <script>
-import { store } from "../store.js" //state management
-import register from "../debug" //per debuggare il componente da console
-import AgencyCard from "./AppAgencycard.vue"
-import OurWorkCard from "./CaseStudyCard.vue"
+import { store } from "../store.js";//state management
+import register from "../debug";//per debuggare il componente da console
+import AgencyCard from "./AppAgencycard.vue";
+import OurWorkCard from "./CaseStudyCard.vue";
+import FinancialCard from "./FinancialPlanCard.vue";
+import NewsCard from "./AppNewsCard.vue"
+import autoCarousel from "./AutomatedCarousel.vue"
+
+
+
+
+
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/autoplay';
+
+// Import Swiper styles
+import 'swiper/css';
 
 export default {
     name: "AppComponent",
     components: {
         AgencyCard,
-        OurWorkCard
+        OurWorkCard,
+        FinancialCard,
+        NewsCard,
+        autoCarousel
+
     },
     data() {
         return {
@@ -130,7 +151,6 @@ export default {
 
 
 
-    <!-- LA PARTE RESTANTE VERRà CURATA NELLA MATTINATA DI DOMANI SCUSATE IL DISAGIO -->
     <!-- ******************************************************************* -->
     <!-- sezione piani-->
     <div class="bg-blue-img">
@@ -149,12 +169,15 @@ export default {
 
             </div>
             <div class="row">
-                <!-- v-for per creare le carte <div class="col-3"></div>-->
+                <div v-for="element in store.AppFinancialPlans" class="col-3">
+                    <FinancialCard :obj="element" />
+                </div>
 
 
             </div>
         </div>
     </div>
+
     <!-- CREO COMPONENTE DESCRIZIONE SEZIONI GENERICO -->
     <!-- MI CREO UN COMPONENTE CARTA -->
     <!-- PASSO PIANI TARIFFARI TRAMITE PROPS E LO STORE -->
@@ -170,7 +193,8 @@ export default {
                 <div class="col-12 text-black d-flex flex-wrap justify-content-center">
                     <h2 class="fw-bold my-3">lorenasdasdasdasdazsdas asdasd asdasdad
                     </h2>
-                    <p class="w-50 text-center pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae itaque
+                    <p class="w-50 text-center pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
+                        itaque
                         dolorum veniam
                         eum illo
                         quam
@@ -180,9 +204,18 @@ export default {
 
             </div>
             <div class="row">
-                <!-- v-for per creare le carte <div class="col-4"></div>-->
+                <div v-for="element in store.NewsSection" class="col-4">
+                    <NewsCard :obj="element" />
 
+                </div>
 
+            </div>
+
+            <div class="row ">
+                <div class="col d-flex justify-content-center">
+
+                    <button class="btn btn-warning rounded-pill text-white">GO TO NEWS</button>
+                </div>
             </div>
         </div>
     </div>
@@ -212,9 +245,11 @@ export default {
             <hr class="w-75 text-black m-auto">
             <div class="row">
 
-                <!-- CAROSELLO AUTOMATICO -->
 
-                <!-- v-for per creare le carte <div class="col-4"></div>-->
+
+                <autoCarousel />
+
+
 
 
             </div>
@@ -226,7 +261,8 @@ export default {
                 <div class="col-12 text-black d-flex flex-wrap justify-content-center">
                     <h2 class="fw-bold my-3">lorenasdasdasdasdazsdas asdasd asdasdad
                     </h2>
-                    <p class="w-50 text-center pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae itaque
+                    <p class="w-50 text-center pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
+                        itaque
                         dolorum veniam
                         eum illo
                         quam
@@ -253,6 +289,12 @@ export default {
 // importo variabili
 @use '../styles/partials/variables' as *;
 
+.btn-warning {
+    background-color: $themeColorYellow;
+    font-size: x-small;
+    font-weight: bold;
+    padding: 0.5rem 1.5rem;
+}
 
 .bg-white-wash {
     background-color: $themeColorLight;
@@ -273,19 +315,12 @@ export default {
 
     .background-dark {
         background-color: #071b50;
-
     }
 }
 
 
 .bg-img-filtered {
-
-
     background-image: url(../assets/images/images/case-study-gallery-3-1.jpg);
-
-
-
-
 }
 
 // ...qui eventuale SCSS di AppComponent

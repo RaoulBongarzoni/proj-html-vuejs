@@ -4,6 +4,7 @@ import App from './App.vue'
 // importo bootstrap (js)
 import * as bootstrap from 'bootstrap'
 
+
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
