@@ -50,7 +50,7 @@ export default {
     background-color: transparent;
     color: white;
     border: none;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
 
     .btn {
         margin: 2rem 2rem 0 0;
